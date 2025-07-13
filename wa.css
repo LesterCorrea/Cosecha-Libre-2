@@ -76,7 +76,7 @@ img {
     font-size: 1.8em;
     font-weight: bold;
     color: var(--color-text-dark);
-    margin: 0 auto;
+    margin: 0 auto 0 0;
     text-align: center;
 }
 
