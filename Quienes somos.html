@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <title>| Quienes somos</title>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      color: #333;
+    }
+
+    nav {
+  background-color: #000000a3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.Los_links {
+  display: flex;
+  list-style: none;
+  margin-left: 500px;
+  margin-top: 0;
+  padding-top: 15px;
+}
+
+.Los_links li {
+  margin-left: 25px;
+}
+
+.Los_links a {
+  text-decoration: none;
+  color: #fffafa;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.Los_links a:hover {
+  color: #e67e22;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .Los_links {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .Los_links li {
+    margin: 0 10px;
+  }
+}
+
+    .Los_links a {
+      text-decoration: none;
+      color: #fffafa;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .Los_links a:hover {
+      color: #e67e22;
+    }
+
+    .cuerpoinicio {
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 280px;
+      position: relative;
+    }
+
+    .cuerpoinicio::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .cuerpoiniciocontenido {
+      position: relative;
+      color: white;
+      max-width: 800px;
+      padding: 20px;
+      font-size: 54px;
+      font-weight: bold;
+    }
+
+    .SobreNosotros {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 90px 20px;
+    }
+
+    .NosotrosDesc {
+      font-size: 23px;
+      max-width: 500px;
+      flex: 1;
+    }
+
+    .ImagenDesc {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 10px;
+      flex: 1;
+      display: block;
+    }
+
+    .chefs {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 100px;
+      color: orange;
+      background-color: rgba(255, 255, 255, 0.897);
+      padding-bottom: 100px;
+    }
+
+    .equipo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .miembro {
+      position: relative;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .miembro:hover {
+      transform: scale(1.02);
+    }
+
+    .overlay {
+      position: absolute;
+      font-family: sans-serif;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      transition: opacity 0.3s ease;
+      font-size: 20px;
+    }
+
+    .miembro:hover .overlay {
+      opacity: 1;
+    }
+
+    .miembro img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    .nombre {
+      font-weight: bold;
+      font-size: 18px;
+      color: orange;
+      margin-bottom: 5px;
+    }
+
+    .rol {
+      font-size: 13px;
+      color: #282727;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .reservas {
+      text-align: center;
+      background-color: #fde2cb;
+      padding: 40px 20px;
+      padding-bottom: 100px;
+    }
+
+    h1 {
+      font-family: 'Georgia', serif;
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      min-width: 300px;
+    }
+
+    .formulario label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .formulario select,
+    .formulario input[type="text"],
+    .formulario button {
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .formulario button.reservar {
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .formulario button.reservar:hover {
+      background-color: orange;
+    }
+
+    .formulario .espera {
+      background-color: white;
+      border: 1px solid #ccc;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .formulario .espera:hover {
+      background-color: #f0f0f0;
+    }
+
+    .calendar {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .calendar th,
+    .calendar td {
+      border: 1px solid #eee;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .calendar td:hover {
+      background-color: #eee;
+    }
+
+    .calendar .selected {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px;
+        flex-direction: column;
+      }
+
+      .cuerpoinicio {
+        padding-left: 20px;
+        text-align: center;
+      }
+
+      .cuerpoiniciocontenido {
+        font-size: 36px;
+      }
+
+      .SobreNosotros {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .ImagenDesc {
+        margin: 0 auto;
+      }
+    }
+
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    #modal .contenido {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+
+    #modal button {
+      padding: 10px 20px;
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    
+    footer{
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: #fff;
+        padding: 60px 0 20px;
+    }
+    
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .footer-section h3{
+        margin-bottom: 20px;
+        color: #e67e22;
+        font-size: 1.3rem;
+        border-bottom: 2px solid #e67e22;
+        padding-bottom: 10px;
+    }
+    
+    .footer-section p{
+        color: #bbb;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    
+    .footer-section .icon {
+        margin-right: 8px;
+        font-size: 1.1rem;
+    }
+    
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .social-link {
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 0.9rem;
+    }
+    
+    .social-link:hover {
+        color: #e67e22;
+    }
+    
+    .location-link {
+        color: #e67e22;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+        display: inline-block;
+        transition: color 0.3s;
+    }
+    
+    .location-link:hover {
+        color: #d35400;
+    }
+    
+    .map-container {
+        margin-top: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #555;
+    }
+    
+    .footer-bottom p {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        nav {
+            padding: 15px 20px;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .Los_links {
+            justify-content: center;
+        }
+        
+        .Los_links li {
+            margin: 0 15px;
+        }
+        
+        .Cuerpo_medio_contenido h1 {
+            font-size: 2.5rem;
+        }
+        
+        .Cuerpo_medio_contenido p {
+            font-size: 1rem;
+        }
+        
+        .footer-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .map-container iframe {
+            height: 200px;
+        }
+    }
+     
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+    </div>
+    <ul class="Los_links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Menu.html">Menú</a></li>
+      <li><a href="comentarios.html">Reseñas</a></li>
+      <li><a href="contactanos.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <section class="cuerpoinicio">
+    <div class="cuerpoiniciocontenido">
+      <h6 style="font-size: 24px;">Cosecha Viva</h6>
+      <h1>Ven a disfrutar el momento</h1>
+    </div>
+  </section>
+
+  <section class="SobreNosotros">
+    <div class="NosotrosDesc">
+      <h6 style="font-size: 24px; color: gray;">Sobre</h6>
+      <h1 style="color: orange;">Nosotros</h1>
+      <p>CosechaViva fusiona lo mejor de la gastronomía peruana con el sabor auténtico de la
+        cocina tradicional. Vive una experiencia culinaria llena de aromas, sazón y cultura en cada bocado.</p>
+    </div>
+    <img class="ImagenDesc" src="https://media.viajando.travel/p/92f0ff3fe4fc77573ba928c7610cb8f6/adjuntos/236/imagenes/000/590/0000590082/1200x675/smart/perugastronomiajpg.jpg" alt="Descripción">
+  </section>
+
+  <section class="chefs">
+    <h2>Conoce a nuestros chefs</h2>
+    <h3 style="color: gray;">Lo mejor de la región</h3>
+    <hr style="height: 50px;" color="white">
+    <div class="equipo">
+      <div class="miembro">
+        <img src="https://www.redbamboo.info/images/team-image1.jpg" alt="">
+        <div class="overlay">Pasión por los sabores auténticos</div>
+        <div class="info">
+          <div class="nombre">Sofía Martínez</div>
+          <div class="rol">Chef Ejecutiva</div>
+        </div>
+      </div>
+      <div class="miembro">
+        <img src="https://www.redbamboo.info/images/team-image2.jpg" alt="">
+        <div class="overlay">Visión y creatividad en cada plato</div>
+        <div class="info">
+          <div class="nombre">Daniel Ríos</div>
+          <div class="rol">Propietario & Director General</div>
+        </div>
+      </div>
+      <div class="miembro">
+        <img src="https://www.redbamboo.info/images/team-image3.jpg" alt="">
+        <div class="overlay">Chefs con un toque único</div>
+        <div class="info">
+          <div class="nombre">Julián Herrera</div>
+          <div class="rol">Especialista en Pizzas Artesanales</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservas">
+    <hr color="#fde2cb" style="height: 50px;">
+    <h1>Reserva con nosotros</h1>
+    <div class="contenedor">
+      <div class="calendar" id="calendario"></div>
+      <div class="formulario">
+        <label for="personas">Personas</label>
+        <select id="personas">
+          <option>2 personas</option>
+          <option>3 personas</option>
+          <option>4 personas</option>
+        </select>
+
+        <label for="hora">Hora</label>
+        <select id="hora">
+          <option>Seleccione</option>
+          <option>12:00 PM</option>
+          <option>1:00 PM</option>
+          <option>2:00 PM</option>
+          <option>7:00 PM</option>
+          <option>8:00 PM</option>
+        </select>
+
+        <label for="zona">Zona</label>
+        <select id="zona">
+          <option>Seleccione la zona</option>
+          <option>Interior</option>
+          <option>Terraza</option>
+        </select>
+
+        <button class="reservar">Reservar</button>
+  </section>
+
+  <div id="modal">
+    <div class="contenido">
+      <h2>¡Reservado con éxito!</h2>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const calendario = document.getElementById("calendario");
+
+    function generarCalendario(mes, año) {
+      const diasSemana = ['L', 'M', 'Mi', 'J', 'V', 'S', 'D'];
+      const fecha = new Date(año, mes, 1);
+      const primerDia = (fecha.getDay() + 6) % 7;
+      const ultimoDia = new Date(año, mes + 1, 0).getDate();
+
+      let html = `<div style="text-align:center; font-weight:bold;">Julio ${año}</div>`;
+      html += `<table><thead><tr>${diasSemana.map(d => `<th>${d}</th>`).join('')}</tr></thead><tbody><tr>`;
+
+      for (let i = 0; i < primerDia; i++) {
+        html += "<td></td>";
+      }
+
+      for (let d = 1; d <= ultimoDia; d++) {
+        if ((primerDia + d - 1) % 7 === 0 && d !== 1) html += "</tr><tr>";
+        html += `<td class="dia">${d}</td>`;
+      }
+
+      html += "</tr></tbody></table>";
+      calendario.innerHTML = html;
+
+      document.querySelectorAll(".dia").forEach(td => {
+        td.addEventListener("click", () => {
+          document.querySelectorAll(".dia").forEach(d => d.classList.remove("selected"));
+          td.classList.add("selected");
+        });
+      });
+    }
+
+    generarCalendario(6, 2025);
+
+    document.querySelector(".reservar").addEventListener("click", () => {
+      document.getElementById("modal").style.display = "flex";
+    });
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 11am - 10pm</p>
+                <p>Sábado y Domingo: 10am - 11pm</p>
+                <h3>Políticas & Términos</h3>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="#">Términos y condiciones de la web</a></p>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="#">Políticas de privacidad</a></p>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="#">Políticas de delivery y recojo</a></p>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="#">Términos y condiciones de promociones</a></p>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="#">Política de cookies</a></li>
+                <p><a  style="text-decoration: none;color: #bbb;"   href="reclamaciones.html">Libro de reclamaciones online</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="icon"><i class="bi bi-phone fs-4 text-white"></i>+51 987 654 321</i></p><i class="icon">
+                <p><i class="icon"><i class="bi bi-envelope-at fs-4 text-white"> </i> info@cosechaviva.com</i></p><i class="icon">
+                <p><i class="icon"><i class="bi bi-whatsapp fs-4 text-white"> </i> WhatsApp: +51 987 654 321</i></p><i class="icon">
+                <div class="social-links">
+                    <!-- Esto todavia esta en proceso -->
+                    <a href="https://cosecha-viva.vercel.app/#" class="social-link"><i class="bi bi-facebook fs-4 text-white"> </i>Facebook</a>
+                    <a href="https://cosecha-viva.vercel.app/#" class="social-link"><i class="bi bi-instagram fs-4 text-white"> </i>Instagram</a>
+                    <a href="https://cosecha-viva.vercel.app/#" class="social-link"><i class="bi bi-twitter fs-4 text-white" "=""> </i>Twitter</a>
+                </div>
+            </i></i></i></div><i class="icon"><i class="icon"><i class="icon">
+            
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p><i class="icon">📍</i> Av. Principal 123</p>
+                <p>Miraflores, Lima - Perú</p>
+                <p>Cerca al Parque Kennedy</p>
+                <a href="https://maps.google.com/" class="location-link">Ver en Google Maps</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Mapa</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3126894616447!2d-77.0428!3d-12.1215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c816c5b2e9e5%3A0x99ad5f2c2b5e5a9f!2sMiraflores%2C%20Lima!5e0!3m2!1ses!2spe!4v1234567890123" width="100%" height="150" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </i></i></i></div><i class="icon"><i class="icon">
+        
+        <div class="footer-bottom">
+            <p>© 2024 Cosecha Viva. Todos los derechos reservados.</p>
+            <p>Desarrollado por Angel Rosales Montero</p>
+        </div>
+    </i></i></footer><i class="icon"><i class="icon">
+
+
+</body>
+</html>

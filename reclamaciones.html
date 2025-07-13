@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones - Cosecha Viva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reclamaciones.css">
+</head>
+<body>
+
+    <div class="reclamaciones-header-simple">
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Logo Cosecha Viva" class="reclamaciones-logo-big">
+        </a>
+    </div>
+
+    <main class="reclamaciones-main">
+        <section class="reclamaciones-section">
+            <h1>Libro de Reclamaciones</h1>
+            <p class="intro-text">En Cosecha Viva, nos importa tu experiencia. Si tienes alguna queja o reclamo, por favor, completa el siguiente formulario. Nos comprometemos a responder a la brevedad.</p>
+
+            <form class="reclamaciones-form">
+                <h2>Datos del Consumidor</h2>
+                <div class="form-group">
+                    <label for="tipoDoc">Tipo de Documento:</label>
+                    <select id="tipoDoc" name="tipoDoc" required>
+                        <option value="">Seleccione</option>
+                        <option value="DNI">DNI</option>
+                        <option value="CE">Carnet de Extranjería</option>
+                        <option value="PAS">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numDoc">Número de Documento:</label>
+                    <input type="text" id="numDoc" name="numDoc" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre(s):</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido(s):</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección (Opcional):</label>
+                    <input type="text" id="direccion" name="direccion">
+                </div>
+
+                <h2>Detalles del Reclamo/Queja</h2>
+                <div class="form-group">
+                    <label for="tipoRec">Tipo:</label>
+                    <select id="tipoRec" name="tipoRec" required>
+                        <option value="">Seleccione</option>
+                        <option value="queja">Queja (Disconformidad no relacionada directamente con el producto/servicio)</option>
+                        <option value="reclamo">Reclamo (Disconformidad relacionada directamente con el producto/servicio)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fechaIncidente">Fecha del Incidente:</label>
+                    <input type="date" id="fechaIncidente" name="fechaIncidente" required>
+                </div>
+                 <div class="form-group">
+                    <label for="monto">Monto Reclamado (S/):</label>
+                    <input type="number" id="monto" name="monto" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Detalle de la Queja/Reclamo:</label>
+                    <textarea id="descripcion" name="descripcion" rows="8" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pedido">Pedido del Consumidor:</label>
+                    <textarea id="pedido" name="pedido" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" required>
+                    <label for="aceptoTerminos">Acepto los términos y condiciones y política de privacidad.</label>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar Reclamo/Queja</button>
+            </form>
+            <p class="final-text">Conforme al Código de Protección y Defensa del Consumidor, Ley N° 29571. <br> "El proveedor deberá dar respuesta a la queja o reclamo en un plazo máximo de treinta (30) días calendario."</p>
+        </section>
+    </main>
+     <script src="script.js"></script>
+</body>
+</html>

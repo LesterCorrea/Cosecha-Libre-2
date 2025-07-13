@@ -1,0 +1,284 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.reclamaciones-main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.reclamaciones-section h1 {
+    text-align: center;
+    color: #A0312F;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.reclamaciones-section .intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.reclamaciones-form {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.reclamaciones-form h2 {
+    color: #386A2E;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #386A2E;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2C197.973L146.2%2C57.173L5.4%2C197.973H287z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #A0312F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.submit-button:hover {
+    background-color: #7d2624;
+}
+
+.final-text {
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 40px;
+    line-height: 1.5;
+}
+
+.reclamaciones-header-simple {
+    background-color: rgba(173, 237, 255, 0.491);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(224, 177, 177, 0.2);
+}
+
+.reclamaciones-logo-big {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para el Modal de Confirmación */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Permanece en la misma posición, incluso al desplazarse */
+    z-index: 1001; /* Z-index alto para que esté encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente negro */
+    display: flex; /* Usar flexbox para centrar contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Asegura que se centre incluso sin flexbox completo */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative; /* Para posicionar el botón de cerrar */
+}
+
+.close-button {
+    color: #aaa;
+    float: right; /* A la derecha del contenido */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute; /* Posicionamiento absoluto dentro del modal-content */
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalMessage {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.modal-ok-button {
+    background-color: #386A2E; /* Un color verde que combina con tu tema */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-ok-button:hover {
+    background-color: #2b5223;
+}
+
+/* Media Queries para responsividad del formulario y modal */
+@media (max-width: 768px) {
+    .reclamaciones-main {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .reclamaciones-section h1 {
+        font-size: 2em;
+    }
+    .reclamaciones-form {
+        padding: 20px;
+    }
+    .reclamaciones-form h2 {
+        font-size: 1.5em;
+    }
+    .submit-button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+    .reclamaciones-logo-big {
+        max-height: 80px;
+    }
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    #modalMessage {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .reclamaciones-main {
+        padding: 15px;
+        margin: 15px;
+    }
+    .reclamaciones-section h1 {
+        font-size: 1.8em;
+    }
+    .reclamaciones-form h2 {
+        font-size: 1.3em;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+    }
+    .submit-button {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .reclamaciones-logo-big {
+        max-height: 60px;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    #modalMessage {
+        font-size: 1em;
+    }
+}
