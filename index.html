@@ -36,6 +36,12 @@
             <a href="Menu.html" class="boton">Ver Menú</a>
         </div>
     </section>
+    <!-- Botón WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/51987654321" target="_blank">
+            <i class="icon"><i class="bi bi-whatsapp fs-1 text-white"></i> 
+        </a>
+    </div>
     
     <footer>
         <div class="footer-container">
@@ -95,6 +101,12 @@
             <p>Desarrollado por Fernando Correa Huincho</p>
         </div>
     </footer>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <button id="playMusicBtn" class="btn btn-warning shadow-sm">
+        🎵 Reproducir música
+        </button>
+    </div>
 </body>
 
 <style>
@@ -104,7 +116,14 @@
         box-sizing: border-box;
         font-family: 'times new roman', sans-serif;
     }
-    
+
+    .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+        }
+
     body{
         margin: 0;
         padding: 0;
@@ -369,6 +388,17 @@
             heroSection.classList.add('fallback');
             video.style.display = 'none';
         });
+    });
+
+    document.getElementById('playMusicBtn').addEventListener('click', function () {
+        const iframe = document.createElement('iframe');
+        iframe.width = 0;
+        iframe.height = 0;
+        iframe.src = "https://www.youtube.com/embed/gqMPTbwacvs?autoplay=1";
+        iframe.allow = "autoplay";
+        iframe.frameBorder = "0";
+        document.body.appendChild(iframe);
+        this.style.display = 'none';
     });
 </script>
 
